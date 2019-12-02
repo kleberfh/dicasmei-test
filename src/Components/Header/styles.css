@@ -1,0 +1,74 @@
+.top-row {
+    display: flex;
+    flex: auto;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
+    margin-right: 28rem;
+    object-fit: contain;
+}
+
+.guard {
+    width: 2.5rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.top-text {
+    width: 12rem;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: right;
+    color: #002042;
+    margin-right: 10px;
+}
+
+.text-alignment {
+    display: grid;
+}
+
+.body-content {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-text {
+    width: 550px;
+    height: 27px;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.91;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.sub-text {
+    width: 604px;
+    height: 22px;
+    object-fit: contain;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+}

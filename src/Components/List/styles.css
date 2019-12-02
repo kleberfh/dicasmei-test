@@ -1,0 +1,83 @@
+.display-bills {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bills-list {
+    width: 60rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bill-item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.month {
+    margin-top: 20px;
+    width: 42px;
+    height: 49px;
+    object-fit: contain;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.day {
+    margin-top: -30px;
+    width: 42px;
+    object-fit: contain;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.value {
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 32px;
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.status {
+    margin-top: 10px;
+    height: 18px;
+    object-fit: contain;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.80;
+    letter-spacing: normal;
+    text-align: left;
+}

@@ -1,0 +1,42 @@
+.body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cnpj-input {
+    margin-top: 30px;
+    width: 280px !important;
+}
+
+.agreement {
+    margin-top: 20px;
+}
+
+.mini-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666666;
+}
+
+.button-align {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    color: white;
+    border: 0px;
+    width: 212px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50px;
+    background-color: #e1173f;
+}
