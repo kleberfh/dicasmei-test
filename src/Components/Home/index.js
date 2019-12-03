@@ -14,7 +14,7 @@ const Home = (props) => {
     const [tooltipOpenAgreement, seTooltipOpenAgreement] = useState(false);
     const [tooltipOpen, seTooltipOpen] = useState(false);
     const [agreement, setAgreement] = useState(false);
-    const [showToast, setShowToast] = useState(false);
+    const [showToast, setShowToast] = useState('');
     const [redirect, setRedirect] = useState(false);
     const [loading, setLoading] = useState(false);
     const [bills, setBills] = useState(null);
@@ -46,7 +46,10 @@ const Home = (props) => {
         console.log(!billsResponse || !billsResponse.boletos || (billsResponse.boletos.status && billsResponse.boletos.mensagem));
         if (!billsResponse || !billsResponse.boletos || (billsResponse.boletos.status && billsResponse.boletos.mensagem)) {
             setLoading(false);
-            setShowToast(true);
+            setShowToast(
+                (billsResponse.boletos && billsResponse.boletos.mensagem) ?
+                    billsResponse.boletos.mensagem :
+                    'Ocorreu um erro, por favor tente novamente mais tarde');
             return
         }
         setBills(billsResponse);
@@ -67,10 +70,10 @@ const Home = (props) => {
                 <Tooltip placement="top" isOpen={tooltipOpen} target="cnpj">
                     CNPJ inválido
                 </Tooltip>
-                <Toast isOpen={showToast} className={'bg-danger'}>
-                    <ToastHeader toggle={() => setShowToast(false)}>Ops!</ToastHeader>
+                <Toast isOpen={showToast !== ''} className={'bg-danger'}>
+                    <ToastHeader toggle={() => setShowToast('')}>Ops!</ToastHeader>
                     <ToastBody>
-                        Desculpe, correu um erro ao carregar os boletos. Por favor, verifique o CNPJ ou tente novamente mais tarde.
+                        {showToast}
                     </ToastBody>
                 </Toast>
                 <InputMask mask={'99.999.999/9999-99'} maskChar={null} value={cnpj} onChange={(e) => handleCnpjChange(e.target.value)}>

@@ -23,10 +23,6 @@ const List = (props) => {
         borderRadius: 20
     };
 
-    const getYear = (value) => {
-        return
-    };
-
     const getMonth = (value) => {
         const month = value.split('/')[0];
         return month.substring(3, 0);
@@ -38,7 +34,7 @@ const List = (props) => {
     };
 
     const getValue = (value) => {
-        return value !== '-' ? value : 'Pago';
+        return value;
     };
 
     const getStatus = (value) => {
@@ -58,7 +54,7 @@ const List = (props) => {
                             <span className={'status'}
                                 style={getStatus(bill.situacao) ? {} : customBadgeStyle}
                             >
-                                {getStatus(bill.situacao) ? '' : 'Em aberto'}
+                                {getStatus(bill.situacao) ? 'Pago' : 'Em aberto'}
                             </span>
                         </div>
                     ))}

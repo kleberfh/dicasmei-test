@@ -1,4 +1,3 @@
-import React from 'react';
 import Axios from "axios";
 
 const baseURL = 'http://dev.entrevista.dicasmei.com.br/api/';
